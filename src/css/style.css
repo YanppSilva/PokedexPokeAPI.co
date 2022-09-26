@@ -53,6 +53,10 @@ body {
   transform: scale(1.1);
 }
 
+.dev__nome {
+  color: #222;
+}
+
 .logo {
   display: block;
   height: 150px;
@@ -64,7 +68,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
-  padding-inline-start: 0;
+  padding: 0 40px;
 }
 
 .card {
