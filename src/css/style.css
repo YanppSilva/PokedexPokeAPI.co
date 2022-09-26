@@ -1,0 +1,209 @@
+:root {
+
+  --steel-bg: #f4f4f4;
+  --fire-bg: #ed8a8b;
+  --grass-bg: #49d0b0;
+  --electric-bg: #fcc719;
+  --water-ice-bg: #76befe;
+
+  --ground-bg: #f4e7da;
+  --rock-bg: #d5d5d4;
+  --fairy-bg: #fceaff;
+  --poison-bg: #98d7a5;
+  --bug-bg: #267d3b;
+  --dragon-bg: #97b3e6;
+  --psychic-bg: #623474;
+  --flying-bg: #F5F5F5;
+  --fighting-bg: #E6E0D4;
+  --normal-bg: #F5F5F5;
+}
+
+body {
+  background-color: #DADFE8;
+  color: white;
+  margin: 0;
+  font-family: rubik;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-bottom: 50px;
+}
+
+.navbar-link {
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+}
+
+.navbar-link__li {
+  color: #222;
+  width: 32px;
+  height: 32px;
+}
+
+.navbar-link__li:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  display: block;
+  height: 150px;
+  margin: auto;
+  width: 200px;
+}
+
+.pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  padding-inline-start: 0;
+}
+
+.card {
+  list-style: none;
+  padding: 40px;
+  color: #222;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: .7;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+
+.steel {
+  background-color: var(--steel-bg);
+}
+
+.fire {
+  background-color: var(--fire-bg);
+}
+
+.grass {
+  background-color: var(--grass-bg);
+}
+
+.electric {
+  background-color: var(--electric-bg);
+}
+
+.water, .ice {
+  background-color: var(--water-ice-bg);
+}
+
+.ground {
+  background-color: var(--grass-bg);
+}
+
+.rock {
+  background-color: var(--rock-bg);
+}
+
+.fairy {
+  background-color: var(--fairy-bg);
+}
+
+.poison {
+  background-color: var(--poison-bg);
+}
+
+.bug {
+  background-color: var(--bug-bg);
+}
+
+.dragon {
+  background-color: var(--dragon-bg);
+}
+
+.psychic {
+  background-color: var(--psychic-bg);
+}
+
+.flying {
+  background-color: var(--flying-bg);
+}
+
+.fighting {
+  background-color: var(--fighting-bg);
+}
+
+.normal {
+  background-color: var(--normal-bg);
+}
+
+.card:hover {
+  animation: bounce 0.5s linear;
+}
+
+.card-title {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  font-size: 32px;
+  font-weight: normal;
+  position: relative;
+  z-index: 2;
+}
+
+.card-subtitle {
+  margin-top: 5px;
+  color: #666;
+  font-weight: lighter;
+  position: relative;
+  z-index: 2;
+}
+
+.card-image {
+  height: 180px;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+
+  40% {
+    transform: translateY(0px);
+  }
+
+  80% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-link__li {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .navbar-link__li {
+    width: 70px;
+    height: 60px;
+  }
+}
